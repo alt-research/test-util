@@ -1,0 +1,60 @@
+{
+  "name": "test-util",
+  "version": "0.0.1",
+  "description": "test util",
+  "author": "alt-research",
+  "scripts": {
+    "pretty": "prettier --write --ignore-unknown --plugin prettier-plugin-jsdoc 'src/**/*' 'scripts/**/*'"
+  },
+  "homepage": "https://github.com/alt-research/",
+  "license": "MIT",
+  "dependencies": {
+    "@oclif/core": "^1.26.2",
+    "@oclif/plugin-commands": "^2.2.15",
+    "@oclif/plugin-help": "^5",
+    "@oclif/plugin-not-found": "^2.3.23",
+    "@oclif/plugin-update": "^3.1.13",
+    "@oclif/plugin-warn-if-update-available": "^2.0.36",
+    "@oclif/plugin-which": "^2.2.19",
+    "@polkadot/api": "^9.13.6",
+    "@polkadot/keyring": "^10.4.2",
+    "@polkadot/ui-keyring": "^2.12.1",
+    "@polkadot/ui-settings": "^2.12.1",
+    "@polkadot/util": "^10.1.14",
+    "colorette": "^2.0.20",
+    "ethers": "^5.7.2",
+    "jsonc-parser": "^3.2.0"
+  },
+  "devDependencies": {
+    "@oclif/test": "^2.3.17",
+    "@polkadot/typegen": "^9.14.2",
+    "@putout/plugin-convert-esm-to-commonjs": "^5.0.0",
+    "@types/chai": "^4",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.18.26",
+    "chai": "^4",
+    "eslint": "^7.32.0",
+    "eslint-config-oclif": "^4",
+    "eslint-config-oclif-typescript": "^1.0.3",
+    "gts": "^3.1.1",
+    "makensis": "^2.0.5",
+    "mocha": "^9",
+    "oclif": "^3.8.1",
+    "pkg": "^5.8.1",
+    "prettier": "2.8.8",
+    "prettier-plugin-jsdoc": "0.4.2",
+    "shx": "^0.3.4",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.5.0",
+    "typescript": "^4.9.5"
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+}

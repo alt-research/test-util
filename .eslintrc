@@ -1,0 +1,24 @@
+{
+  "extends": ["oclif", "oclif-typescript", "./node_modules/gts"],
+  "rules": {
+    // "quotes": ["warn", "double"],
+    "node/no-extraneous-import": "off",
+    "object-curly-spacing": "off",
+    "semi": "off",
+    "unicorn/no-abusive-eslint-disable": "off",
+    "indent": [
+      "warn",
+      2,
+      {
+        "MemberExpression": 1
+      }
+    ],
+    // "endOfLine": 1,
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ]
+  }
+}

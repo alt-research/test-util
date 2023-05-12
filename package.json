@@ -9,13 +9,6 @@
   "homepage": "https://github.com/alt-research/",
   "license": "MIT",
   "dependencies": {
-    "@oclif/core": "^1.26.2",
-    "@oclif/plugin-commands": "^2.2.15",
-    "@oclif/plugin-help": "^5",
-    "@oclif/plugin-not-found": "^2.3.23",
-    "@oclif/plugin-update": "^3.1.13",
-    "@oclif/plugin-warn-if-update-available": "^2.0.36",
-    "@oclif/plugin-which": "^2.2.19",
     "@polkadot/api": "^9.13.6",
     "@polkadot/keyring": "^10.4.2",
     "@polkadot/ui-keyring": "^2.12.1",
@@ -39,7 +32,6 @@
     "gts": "^3.1.1",
     "makensis": "^2.0.5",
     "mocha": "^9",
-    "oclif": "^3.8.1",
     "pkg": "^5.8.1",
     "prettier": "2.8.8",
     "prettier-plugin-jsdoc": "0.4.2",
@@ -56,5 +48,5 @@
   },
   "engines": {
     "node": ">=12.0.0"
-  },
+  }
 }

@@ -12,6 +12,7 @@
 ```
 4. launch all nodes (beacon,ganache,3 x proudcers) and do sudo-initialize: `./run.sh`
 5. then you can do `authority change` or `code update` as described below.
+6. you can see the output of all nodes in `./beacon.log` and `./alice.log`, etc.
 
 ### auth change
 

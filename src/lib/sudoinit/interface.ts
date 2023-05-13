@@ -4,6 +4,11 @@ export interface SudoInitPayload {
     genesis: GenesisInfo
 }
 
+export interface AuthorityChangePayload {
+    rollupId: number
+    ids: string[]
+}
+
 interface GenesisInfo {
     validationCode: string
     genesisCommit: string

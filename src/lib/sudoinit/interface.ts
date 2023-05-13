@@ -9,6 +9,11 @@ export interface AuthorityChangePayload {
     ids: string[]
 }
 
+export interface CodeUpdatePayload {
+    rollupId: number
+    wasm: string
+}
+
 interface GenesisInfo {
     validationCode: string
     genesisCommit: string

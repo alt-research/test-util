@@ -3,10 +3,10 @@ import * as keychain from '../keychain'
 import { SudoInitPayload } from './interface'
 import fs from 'node:fs'
 
-const validationCode = fs.readFileSync('/home/wenxing/workspace/producer_code.wasm').toString()
-const genesisCommit = fs.readFileSync('/home/wenxing/workspace//producer_genesis_commit').toString()
+export async function templateChainPayload(wasm_path: string, genesis_commit: string): Promise<SudoInitPayload> {
+    const validationCode = fs.readFileSync(wasm_path).toString()
+    const genesisCommit = fs.readFileSync(genesis_commit).toString()
 
-export async function templateChainPayload(): Promise<SudoInitPayload> {
     const keyring = await keychain.load()
     return {
         rollupId: 0,

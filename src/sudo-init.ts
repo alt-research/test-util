@@ -2,6 +2,7 @@ import { ApiPromise, WsProvider } from '@polkadot/api'
 import type { Hash } from '@polkadot/types/interfaces/runtime'
 import * as keychain from './lib/keychain'
 import { templateChainPayload } from './lib/sudoinit/templatechain'
+// import * as process from "process";
 
 const endpoint = 'ws://127.0.0.1:9944'
 async function main() {
@@ -9,11 +10,15 @@ async function main() {
         provider: new WsProvider(endpoint),
     })
 
+    const wasm_path = process.argv[2]
+    const genesis_commit_path = process.argv[3];
+    console.log(`wasm_path: ${wasm_path}, genesis_commit_path: ${genesis_commit_path}`)
+
     const keyring = await keychain.load()
     // let sudoPair: KeyringPair
     const sudoPair = keyring.eth.alith
 
-    const payload = await templateChainPayload()
+    const payload = await templateChainPayload(wasm_path, genesis_commit_path)
 
     const { rollupId, owner, genesis } = payload
     const tx = api.tx.rollupSudoWrapper.sudoInitialize(rollupId, owner, genesis)

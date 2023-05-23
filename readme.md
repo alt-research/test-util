@@ -1,14 +1,14 @@
 ## usage
 
 1. copy binaries to `./bin`, including `alt-beacon` and `altrollup-template-node`
-2. export genesis_commit and validation code
+2. prepare `genesis.json`
+```
+./bin/altrollup-template-node build-spec --chain=dev --raw > genesis.json
+```
+3. export genesis_commit and validation code
 ```bash
 ./bin/altrollup-template-node export-genesis-wasm --chain genesis.json > ./bin/producer_code.wasm
 ./bin/altrollup-template-node export-genesis-commit --chain genesis.json > ./bin/producer_genesis_commit
-```
-3. prepare `genesis.json`
-```
-./bin/altrollup-template-node build-spec --chain=dev --raw > genesis.json
 ```
 4. launch all nodes (beacon,ganache,3 x proudcers) and do sudo-initialize: `./run.sh`
 5. then you can do `authority change` or `code update` as described below.

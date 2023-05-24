@@ -16,7 +16,7 @@ async function main() {
 
   const payload = await proposersPayload()
 
-  const wasm = fs.readFileSync(process.argv[2]).toString()
+  const wasm = `0x${fs.readFileSync(process.argv[2]).toString('hex')}`
   console.log(`wasm_path: ${process.argv[2]}`)
 
   await api.isReady

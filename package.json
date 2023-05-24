@@ -4,7 +4,7 @@
   "description": "test util",
   "author": "alt-research",
   "scripts": {
-    "pretty": "prettier --write --ignore-unknown --plugin prettier-plugin-jsdoc 'src/**/*' 'scripts/**/*'"
+    "pretty": "prettier --write --ignore-unknown --plugin prettier-plugin-jsdoc 'src/**/*'"
   },
   "homepage": "https://github.com/alt-research/",
   "license": "MIT",

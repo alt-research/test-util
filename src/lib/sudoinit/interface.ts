@@ -1,49 +1,49 @@
 export interface SudoInitPayload {
-    rollupId: number
-    owner: string
-    genesis: GenesisInfo
+  rollupId: number
+  owner: string
+  genesis: GenesisInfo
 }
 
 export interface AuthorityChangePayload {
-    rollupId: number
-    ids: string[]
+  rollupId: number
+  ids: string[]
 }
 
 export interface CodeUpdatePayload {
-    rollupId: number
-    wasm: string
+  rollupId: number
+  wasm: string
 }
 
 interface GenesisInfo {
-    validationCode: string
-    genesisCommit: string
-    checkForCommit: boolean
-    sortProposersByAccountid: boolean
-    accountIdType: AccountIdType | string
-    consensusType: ConsensusType | string
-    proposers: ProposerVec[]
-    verifiers: string[]
+  validationCode: string
+  genesisCommit: string
+  checkForCommit: boolean
+  sortProposersByAccountid: boolean
+  accountIdType: AccountIdType | string
+  consensusType: ConsensusType | string
+  proposers: ProposerVec[]
+  verifiers: string[]
 }
 
 type ProposerVec = [accountId20: string, info: ProposerInfo]
 
 interface ProposerInfo {
-    proposer: {
-        AccountId32: string
-    }
-    keys_: {
-        aura: string
-        grandpa: [string, number]
-    }
+  proposer: {
+    AccountId32: string
+  }
+  keys_: {
+    aura: string
+    grandpa: [string, number]
+  }
 }
 
 enum AccountIdType {
-    Number = 'Number',
-    AccountId20 = 'AccountId20',
-    AccountId32 = 'AccountId32',
+  Number = 'Number',
+  AccountId20 = 'AccountId20',
+  AccountId32 = 'AccountId32',
 }
 
 enum ConsensusType {
-    Aura = 'Aura',
-    ManualSeal = 'ManualSeal',
+  Aura = 'Aura',
+  ManualSeal = 'ManualSeal',
 }
